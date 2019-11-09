@@ -34,6 +34,14 @@ module.exports = env => ({
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.(png|svg|woff|woff2|eot|ttf|otf)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'static/media/',
+        },
+      },
     ],
   },
   plugins: [
@@ -42,7 +50,7 @@ module.exports = env => ({
       filename: './index.html',
     }),
     new webpack.DefinePlugin({
-      'process.env.API_URL': JSON.stringify(env.API_URL),
+      'process.env.ENV': JSON.stringify(env.ENV),
     }),
   ],
 });

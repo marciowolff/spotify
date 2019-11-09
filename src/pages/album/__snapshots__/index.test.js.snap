@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should Album to match snapshot 1`] = `
+<div
+  className="container"
+>
+  <button
+    onClick={[Function]}
+  >
+    Voltar
+  </button>
+  <aside
+    className="thumb"
+  >
+    <figure
+      className="media undefined"
+    >
+      <img
+        alt=" - "
+        src={null}
+      />
+      <figcaption>
+        <span>
+           
+        </span>
+      </figcaption>
+    </figure>
+  </aside>
+  <ul
+    className="list"
+  />
+  }
+</div>
+`;

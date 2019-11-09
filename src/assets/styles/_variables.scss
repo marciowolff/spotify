@@ -1,0 +1,175 @@
+/* Ajustando Cores*/
+
+
+/* Colors */
+$color--primary--light:#E5F4FB;
+$color--primary--bright:#66BFE8;
+$color--primary:#0095D9;
+$color--primary--dark:#007FB8;
+
+$color--secondary--light:#F2F9EC;
+$color--secondary:#80C342;
+$color--secondary--dark:#6DA638;
+
+$color--third--light: #FEEFD1;
+$color--third: #FCAF17;
+$color--third--dark: #D69514;
+
+$color--fourth--light: #FDE9EB;
+$color--fourth: #E9233A;
+$color--fourth--dark: #C61E31;
+
+$color--success: $color--secondary;
+$color--warning: $color--third;
+$color--danger: $color--fourth;
+/* --- */
+
+$colors: (  
+  primary: (
+    base: $color--primary,
+    light: $color--primary--light,
+    dark: $color--primary--dark,
+    bright: $color--primary--bright
+  ),
+  secondary: (
+    base: $color--secondary,
+    light: $color--secondary--light,
+    dark: $color--secondary--dark
+  ),
+  third: (
+    base: $color--third,
+    light: $color--third--light,
+    dark: $color--third--dark
+  ),
+  fourth: (
+    base: $color--fourth,
+    light: $color--fourth--light,
+    dark: $color--fourth--dark
+  ),
+  danger: $color--danger,
+  warnig: $color--warning,
+  success: $color--success
+);
+
+$grayscale: (
+  white:      #FFFFFF,
+  ultraLigth: #EDF0F2,
+  extraLight: #F7F9FA,
+  light:      #D0D3D9,
+  medium:     #B2B5BF,
+  dark:       #777C87,
+  ultraDark:  #4A4B4D,
+  black:      #000000
+);
+
+$container-widths: (
+  sm: 576px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1340px,
+  xxxl: 1540px
+);
+
+$margin-top-page: 164px;
+$margin-botton-page: 64px;
+$min-height: 300px;
+
+$layout-breakpoints: (
+  	// Small screen / phone
+    sm: 576px,
+  	
+  	// Medium screen / tablet
+  	md: 768px,
+  	
+  	// Large screen / desktop
+  	lg: 1024px,
+  	
+  	// Extra large screen / wide desktop
+  	xl: 1200px,
+
+    // Extra large screen / wide desktop
+    xxl: 1400px,
+
+    // Super Extra large screen / wide desktop/
+    xxxl: 1600px
+)!default;
+
+/* Fonts */
+$base-font-size: 4px;
+
+$font-xlarge: 40px;
+$font-xlarge--line: 44px;
+
+$font-large: 32px;
+$font-large--line: 36px;
+
+$font-medium: 18px;
+$font-medium--line: 24px;
+
+$font-default: 16px;
+$font-default--line: 20px;
+
+$font-small: 14px;
+$font-small--line: 16px;
+
+$font-xsmall: 14px;
+$font-xsmall--line: 16px;
+$size-icon: 24px;
+
+/* Font Families */
+$font-families: (
+    regular: 'Lato',  
+    heading: 'Lato',
+    display: 'Dobra'
+)!default;
+
+$font-size-context: $base-font-size * 3.5;
+
+$font-sizes: (
+    regular: (
+        body: 14px,
+        link: 12px,
+        description: 10px        
+    ),
+    heading: (
+        first: 24px,
+        second: 16px,
+        third: 14px,
+        fourth: 12px
+    ), 
+    display: (
+        first: 40px,
+        second: 32px                
+    )
+)!default;
+
+$font-weights: (
+    regular: (
+        body: 300,
+        bold: 700,
+        description: 10px        
+    ),
+    heading: (
+        first: 24px,
+        second: 16px,
+        third: 14px,
+        fourth: 12px
+    ), 
+    display: (
+        first: 40px,
+        second: 32px                
+    )
+)!default;
+
+$font-weights: (
+    thin:  200,     
+    normal: 300,    
+    bold: 700   
+)!default;
+
+$link-font: (
+    active: color(primary, base),        
+    hover:  color(primary, dark)
+)!default;
+

@@ -1,8 +1,15 @@
 import React from 'react';
-import { mount } from 'enzyme';
-import toJson from 'enzyme-to-json';
+import ReactDOM from 'react-dom';
 import App from './App';
-it('should render App component', () => {
- const component = mount(<App />);
- expect(toJson(component)).toMatchSnapshot();
+
+describe('<App />', () => {
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<App />, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
+
+  it('App should be a function', () => {
+    expect(typeof App).toBe('function');
+  });
 });

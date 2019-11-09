@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should Search to match snapshot 1`] = `
+Array [
+  <header
+    className="page-header"
+  >
+    <img
+      id="logo"
+      src="mock-file"
+    />
+  </header>,
+  <main
+    class="container page-home"
+  >
+    <div
+      className="input-container "
+    >
+      <label
+        className="label"
+        htmlFor="search"
+      >
+        Busque por artistas, álbuns ou músicas
+      </label>
+      <input
+        className="input"
+        id="search"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyUp={[Function]}
+        type="text"
+      />
+    </div>
+    <div
+      className="result"
+    >
+      <h1>
+        Resultados encontrados para "
+        
+        "
+      </h1>
+      <ul />
+    </div>
+  </main>,
+]
+`;

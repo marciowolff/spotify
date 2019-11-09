@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should Search to match snapshot 1`] = `
+Array [
+  <header
+    className="page-header"
+  >
+    <img
+      id="logo"
+      src="mock-file"
+    />
+  </header>,
+  <main
+    class="container page-home"
+  >
+    <div
+      className="login-spotify"
+    />
+  </main>,
+]
+`;

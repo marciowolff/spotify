@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should Search to match snapshot 1`] = `
+<aside
+  className="thumb"
+>
+  <figure
+    className="media undefined"
+  >
+    <img
+      alt="nome - nome 1, nome 2"
+      src="teste.jpg"
+    />
+    <figcaption>
+      <span>
+        nome
+         
+      </span>
+      nome 1, nome 2
+    </figcaption>
+  </figure>
+</aside>
+`;

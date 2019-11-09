@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should List to match snapshot 1`] = `
+<figure
+  className="media undefined"
+>
+  <img
+    alt="titulo media - descricao media"
+    src="test.jpg"
+  />
+  <figcaption>
+    <span>
+      titulo media
+       
+    </span>
+    descricao media
+  </figcaption>
+</figure>
+`;
