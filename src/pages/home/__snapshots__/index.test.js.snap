@@ -11,7 +11,7 @@ Array [
     />
   </header>,
   <main
-    class="container page-home"
+    className="container page-home"
   >
     <div
       className="input-container "
@@ -28,18 +28,17 @@ Array [
         onBlur={[Function]}
         onChange={[Function]}
         onKeyUp={[Function]}
+        placeholder="Comece a escrever..."
         type="text"
       />
     </div>
     <div
-      className="result"
+      className="container-result"
     >
-      <h1>
-        Resultados encontrados para "
-        
-        "
-      </h1>
-      <ul />
+      
+      <ul
+        className="result-ul"
+      />
     </div>
   </main>,
 ]

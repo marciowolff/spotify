@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Media } from '../';
+import { Media } from '../../../components';
 
-const Thumb = ({ data = {} }) => (
-  <aside className="thumb">
+const Thumb = ({ className = '', data = {} }) => (
+  <aside className={`thumb ${className}`}>
     <Media
       title={data.name}
       imageUrl={data.images ? data.images[0].url : null}

@@ -5,8 +5,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { actionsSpotify } from '../../reducers/actions';
 
 import Container from '../@container';
-import { Search } from '../../components';
+import Search from './search';
 import Result from './result';
+
+import './index.scss';
 
 const Home = props => {
   const [searchValue, setSearchValue] = useState('');
@@ -34,9 +36,11 @@ const Home = props => {
       <Search
         id="search"
         label="Busque por artistas, álbuns ou músicas"
+        placeholder="Comece a escrever..."
         onSearch={handleSearch}
       />
       <Result
+        className="container-result"
         value={searchValue}
         data={reduxSpotify}
         handleClick={handleClick}

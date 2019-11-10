@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import logo from '../../assets/images/image-not-found.svg';
+import logo from './image-not-found.svg';
+import './index.scss';
 
-const Media = ({ imageUrl = logo, title, description, className }) => (
+const Media = ({ imageUrl = logo, title, description, className = '' }) => (
   <figure className={`media ${className}`}>
     <img
       alt={`${title ? title : ''} - ${description ? description : ''}`}
-      src={imageUrl}
+      src={imageUrl ? imageUrl : logo}
     />
     <figcaption>
       <span>{title} </span>

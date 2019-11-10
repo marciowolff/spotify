@@ -4,31 +4,34 @@ exports[`Should Album to match snapshot 1`] = `
 <div
   className="container"
 >
-  <button
+  <a
+    className="button "
     onClick={[Function]}
+    type="link"
   >
-    Voltar
-  </button>
-  <aside
-    className="thumb"
-  >
-    <figure
-      className="media undefined"
+    &lt; Voltar
+  </a>
+  <section>
+    <aside
+      className="thumb album-thumb"
     >
-      <img
-        alt=" - "
-        src={null}
-      />
-      <figcaption>
-        <span>
-           
-        </span>
-      </figcaption>
-    </figure>
-  </aside>
-  <ul
-    className="list"
-  />
-  }
+      <figure
+        className="media "
+      >
+        <img
+          alt=" - "
+          src="mock-file"
+        />
+        <figcaption>
+          <span>
+             
+          </span>
+        </figcaption>
+      </figure>
+    </aside>
+    <ul
+      className="list"
+    />
+  </section>
 </div>
 `;

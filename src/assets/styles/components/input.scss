@@ -1,0 +1,20 @@
+.input-container {
+  .input {
+    border: 0 none;
+    border-bottom: 1px solid color(secondary, base);
+    height: fontsizes(heading, first);
+    line-height: fontsizes(heading, first) + 10;
+    color: color(secondary, base);
+    background-color: $layout-bg;
+    font-size: fontsizes(heading, second);
+  }
+}
+
+@include mobile() {
+  .input-container {
+    padding: 0 10px;
+    .input {
+      font-size: fontsizes(heading, third);
+    }
+  }
+}

@@ -1,12 +1,30 @@
+@import '../../assets/styles/';
+
 .page-header {
-  display: flex;
-  width: 100px;
-  padding: 5px;
+  align-items: flex-start;
+  width: 80px;
+  padding: 30px 10px 20px 20px;
+
   #logo {
-    width: 100%;
+    width: 45px;
   }
 }
+
 .container {
   display: flex;
-  margin: 0 3%;
+  flex-flow: column;
+  padding-top: 30px;
+  margin: 0 auto;
+  width: calc(100% - 130px);
+  max-width: #{map-get($layout-breakpoints, lg)};
+}
+
+@include mobile() {
+  .page-header {
+    width: 100%;
+    padding: 10px;
+  }
+  .container {
+    width: 100%;
+  }
 }

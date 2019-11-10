@@ -60,7 +60,7 @@ it('Should render Media when return with items', () => {
 
   expect(CpMedia).toHaveLength(2);
   expect(CpMedia.at(0).props().title).toEqual('nome1');
-  expect(CpMedia.at(0).props().mediaUrl).toEqual('teste1.jpg');
+  expect(CpMedia.at(0).props().imageUrl).toEqual('teste1.jpg');
   expect(CpMedia.at(0).props().description).toEqual('nome 1, nome 2');
 });
 

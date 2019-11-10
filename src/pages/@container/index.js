@@ -17,7 +17,7 @@ const Container = ({ children, history, location, className }) => {
       <header className="page-header">
         <img id="logo" src={Logo}></img>
       </header>
-      <main class={`container ${className}`}>{children}</main>
+      <main className={`container ${className}`}>{children}</main>
     </>
   );
 };

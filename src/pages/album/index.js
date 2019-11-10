@@ -4,8 +4,11 @@ import services from '../../services';
 import { useDispatch, useSelector } from 'react-redux';
 import { actionsSpotify } from '../../reducers/actions';
 
+import { Button } from '../../components';
 import Container from '../@container';
-import { List, Thumb } from '../../components';
+import List from './list';
+import Thumb from './thumb';
+import './index.scss';
 
 const Album = props => {
   const { params = '' } = props.match;
@@ -22,16 +25,24 @@ const Album = props => {
     }
   }, []);
 
+  const handleCallback = () => {
+    dispatch(actionsSpotify.setAlbum({}));
+    props.history.push('/home');
+  };
+
   return (
     <Container className="page-album" {...props}>
       {reduxSpotifyAlbum && (
         <>
-          <button onClick={() => props.history.push('/home')}>Voltar</button>
-          <Thumb data={reduxSpotifyAlbum} />
-          <List data={reduxSpotifyAlbum} />
+          <Button type="link" handleClick={handleCallback}>
+            &lt; Voltar
+          </Button>
+          <section>
+            <Thumb className="album-thumb" data={reduxSpotifyAlbum} />
+            <List data={reduxSpotifyAlbum} />
+          </section>
         </>
       )}
-      }
     </Container>
   );
 };

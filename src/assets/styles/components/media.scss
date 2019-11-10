@@ -1,0 +1,30 @@
+.media {
+  img {
+    border: 1px solid color(secondary, dark);
+  }
+  figcaption {
+    margin-bottom: 15px;
+    font-size: fontsizes(regular, description);
+    line-height: fontsizes(regular, description) + 10;
+    color: color(secondary, base);
+
+    span {
+      font-size: fontsizes(regular, base);
+      display: block;
+      margin-top: 5px;
+      color: color(primary, base);
+    }
+  }
+
+  &.media-link {
+    &:hover {
+      padding: 10px;
+      background-color: color(secondary, base);
+
+      figcaption,
+      figcaption span {
+        color: color(secondary, dark);
+      }
+    }
+  }
+}

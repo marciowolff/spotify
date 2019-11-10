@@ -11,7 +11,7 @@ Array [
     />
   </header>,
   <main
-    class="container undefined"
+    className="container undefined"
   >
     conteudo
   </main>,

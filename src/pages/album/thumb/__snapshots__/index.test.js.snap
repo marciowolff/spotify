@@ -2,10 +2,10 @@
 
 exports[`Should Search to match snapshot 1`] = `
 <aside
-  className="thumb"
+  className="thumb "
 >
   <figure
-    className="media undefined"
+    className="media "
   >
     <img
       alt="nome - nome 1, nome 2"

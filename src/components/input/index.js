@@ -7,6 +7,7 @@ const Input = ({
   id,
   type,
   label,
+  placeholder,
   className = '',
   handleChange,
   onclick,
@@ -23,6 +24,7 @@ const Input = ({
       id={id}
       type={type ? type : 'text'}
       className="input"
+      placeholder={placeholder}
       onChange={handleChange}
       onClick={onclick}
       {...attrs}

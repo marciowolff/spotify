@@ -1,0 +1,29 @@
+@function color($color-name, $color-variant: null) {
+  // color variant is optional
+  @if ($color-variant != null) {
+    // map inception
+    @return map-get(map-get($colors, $color-name), $color-variant);
+  } @else {
+    @return map-get($colors, $color-name);
+  }
+}
+
+@function grayscale($color-name, $color-variant: null) {
+  // color variant is optional
+  @if ($color-variant != null) {
+    // map inception
+    @return map-get(map-get($grayscale, $color-name), $color-variant);
+  } @else {
+    @return map-get($grayscale, $color-name);
+  }
+}
+
+@function fontsizes($font-size, $font-variant: null) {
+  // font variant is optional
+  @if ($font-variant != null) {
+    // map inception
+    @return map-get(map-get($font-sizes, $font-size), $font-variant);
+  } @else {
+    @return map-get($font-sizes, $font-size);
+  }
+}

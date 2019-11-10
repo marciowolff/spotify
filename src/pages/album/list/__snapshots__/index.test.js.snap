@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should List to match snapshot 1`] = `
+<ul
+  className="list"
+>
+  <li>
+    <span
+      className="number"
+    >
+      1
+      .
+    </span>
+    <span
+      className="name"
+    >
+      name track 1
+    </span>
+    <span
+      className="duration"
+    >
+      10000
+    </span>
+  </li>
+  <li>
+    <span
+      className="number"
+    >
+      2
+      .
+    </span>
+    <span
+      className="name"
+    >
+      name track 2
+    </span>
+    <span
+      className="duration"
+    >
+      20000
+    </span>
+  </li>
+</ul>
+`;

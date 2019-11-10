@@ -1,0 +1,48 @@
+
+/* Controles de Breakpoints */ 
+@mixin mq($width, $type: min) {
+    @if $type == min or $type == max {
+        @media (#{$type}-width: $width) {
+            @content;
+        }
+    } @else {
+        @media (min-width: $width) and (max-width: $type) {
+            @content;
+        }
+    }
+}
+
+/* Mobile SM Media Queries */
+@mixin mobileSM {
+    @media (max-width: #{map-get($layout-breakpoints, sm)}) {
+      @content;
+    }
+}
+
+/* Mobile Media Queries */
+@mixin mobile {
+  	@media (max-width: #{map-get($layout-breakpoints, md)}) {
+    	@content;
+  	}
+}
+
+/* Tablet Media Queries */
+@mixin tablet {
+    @media (min-width: #{map-get($layout-breakpoints, md) + 1px}) and (max-width: #{map-get($layout-breakpoints, lg)}) {
+      @content;
+    }
+}
+
+/* Desktop Media Queries */
+@mixin desktop {
+  	@media (min-width: #{map-get($layout-breakpoints, lg) + 1px}) {
+    	@content;
+  	}
+}
+
+/* Media Query - Desktop Mode & Tablet mode */
+@mixin desktop-and-tablet {
+  	@media (min-width: #{map-get($layout-breakpoints, md) + 1px}) {
+    	@content;
+  	}
+}

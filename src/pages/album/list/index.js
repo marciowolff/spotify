@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.scss';
 
 const List = ({ data = { tracks: { items: [] } } }) => (
   <ul className="list">
@@ -6,10 +7,10 @@ const List = ({ data = { tracks: { items: [] } } }) => (
       data.tracks &&
       data.tracks.items.map(item => (
         <li key={item.id}>
-          {item.track_number}
+          <span className="number">{item.track_number}.</span>
 
-          {item.name}
-          {item.duration_ms}
+          <span className="name">{item.name}</span>
+          <span className="duration">{item.duration_ms}</span>
         </li>
       ))}
   </ul>

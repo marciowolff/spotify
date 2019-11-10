@@ -40,7 +40,7 @@ afterEach(() => {
   spysetAlbum.mockClear();
 });
 
-it('Thumb should be a function', () => {
+it('Album should be a function', () => {
   expect(typeof Album).toBe('function');
 });
 it('Should Album to match snapshot', () => {
@@ -57,7 +57,7 @@ describe('render page default', () => {
   });
 
   it('Should render button callback', () => {
-    expect(wrapper.find('button')).toHaveLength(1);
+    expect(wrapper.find('Button')).toHaveLength(1);
   });
 
   it('Should render component Thumb', () => {
@@ -75,7 +75,7 @@ describe('render page default', () => {
 
 describe('Events', () => {
   it('Should button callback', () => {
-    wrapper.find('button').simulate('click');
+    wrapper.find('Button').simulate('click');
 
     expect(history.push).toHaveBeenCalledWith('/home');
   });

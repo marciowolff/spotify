@@ -11,7 +11,7 @@ Array [
     />
   </header>,
   <main
-    class="container page-home"
+    className="container page-home"
   >
     <div
       className="login-spotify"

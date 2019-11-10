@@ -2,7 +2,7 @@
 
 exports[`Should List to match snapshot 1`] = `
 <figure
-  className="media undefined"
+  className="media "
 >
   <img
     alt="titulo media - descricao media"

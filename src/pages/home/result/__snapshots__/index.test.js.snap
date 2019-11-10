@@ -2,13 +2,17 @@
 
 exports[`Should Search to match snapshot 1`] = `
 <div
-  className="result"
+  className=""
 >
-  <h1>
+  <h1
+    className="h2"
+  >
     Resultados encontrados para "
     texto
     "
   </h1>
-  <ul />
+  <ul
+    className="result-ul"
+  />
 </div>
 `;

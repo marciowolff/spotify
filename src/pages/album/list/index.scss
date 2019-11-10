@@ -1,0 +1,30 @@
+@import '../../../assets/styles/';
+
+.list {
+  display: block;
+  width: 100%;
+
+  li {
+    display: table;
+    width: 100%;
+    margin: 20px 0;
+    font-size: fontsizes(regular, description);
+
+    span {
+      display: table-cell;
+      color: color(secondary, base);
+
+      &.number {
+        width: 40px;
+      }
+
+      &.name {
+        color: color(primary, base);
+      }
+
+      &.duration {
+        width: 100px;
+      }
+    }
+  }
+}

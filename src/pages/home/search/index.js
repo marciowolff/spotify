@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Input } from '../';
+import { Input } from '../../../components';
 
 const Search = ({ id, label, placeholder, onChange, onSearch }) => {
   const [search, setSearch] = useState('');
@@ -13,7 +13,7 @@ const Search = ({ id, label, placeholder, onChange, onSearch }) => {
       onKeyUp={event =>
         event.key === 'Enter' ? onSearch(event.target.value) : null
       }
-      onChange={event => onChange(event.target.value)}
+      onChange={event => (onChange ? onChange(event.target.value) : null)}
       onBlur={event => onSearch(event.target.value)}
     />
   );

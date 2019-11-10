@@ -1,0 +1,18 @@
+.page-album {
+  display: block;
+
+  section {
+    display: flex;
+    flex-flow: row;
+    margin-top: 40px;
+  }
+
+  .album-thumb {
+    width: 300px;
+    margin-right: 50px;
+  }
+
+  .container-result {
+    margin-top: 40px;
+  }
+}

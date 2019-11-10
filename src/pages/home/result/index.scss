@@ -1,0 +1,15 @@
+.h2 {
+  margin-bottom: 20px;
+}
+.result-ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  li {
+    margin: 10px;
+    display: flex;
+    width: 170px;
+    cursor: pointer;
+  }
+}
