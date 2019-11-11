@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "dependencies": {
     "axios": "^0.19.0",
-    "ds": "https://github.com/marciowolff/xp-ds.git#master",
+    "ds": "https://github.com/marciowolff/spotify-designSystem.git#master",
+    "spotify-service": "https://github.com/marciowolff/spotify-service.git#master",
     "file-loader": "^4.2.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",

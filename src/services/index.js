@@ -1,13 +1,15 @@
-import { createClient } from './commons/http';
-import spotifyServiceFactory from './resources/spotify';
+import React from 'react';
+import createClient from 'spotify-service';
 
-export { default as auth } from './commons/auth';
+import { API_URL } from '../constants';
 
-export default function spotifyAPI(baseURL = '') {
-  const httpClient = createClient(baseURL);
-  const dependencies = { httpClient };
+export const services = createClient(API_URL[process.env.ENV]);
+export { default as auth } from 'spotify-service';
 
-  return {
-    spotify: spotifyServiceFactory(dependencies),
-  };
+export function withServices(Component) {
+  const ComponentWithServices = props => (
+    <Component service={services} {...props} />
+  );
+
+  return ComponentWithServices;
 }

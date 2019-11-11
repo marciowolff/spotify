@@ -1,22 +1,18 @@
-import services from './index';
+import React from 'react'
+import { shallow } from 'enzyme'
+import { withServices, services } from './index'
 
-let service;
-describe('services factory', () => {
-  beforeEach(() => {
-    service = services('/teste');
-  });
+it('should be a function', () => {
+  expect(typeof withServices).toBe('function')
+})
 
-  it('should be a function', () => {
-    expect(typeof services).toBe('function');
-  });
+it('should return a function', () => {
+  expect(typeof withServices()).toBe('function')
+})
 
-  it('Should create object spotify', () => {
-    service = services();
-    expect(typeof service.spotify).toBe('object');
-  });
-
-  it('Should create object spotify with search and album', () => {
-    expect(typeof service.spotify.albums).toBe('function');
-    expect(typeof service.spotify.search).toBe('function');
-  });
-});
+it('should inject services on components', () => {
+  const MockComponent = props => <div>{props.children}</div>
+  const ComponentWithServices = withServices(MockComponent)
+  const wrapper = shallow(<ComponentWithServices>test</ComponentWithServices>)
+  expect(wrapper.prop('service')).toBe(services)
+})

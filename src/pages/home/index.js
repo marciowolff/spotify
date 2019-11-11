@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import services from '../../services';
+import { withServices } from '../../services';
 import { useDispatch, useSelector } from 'react-redux';
 import { actionsSpotify } from '../../reducers/actions';
 
@@ -10,7 +10,7 @@ import Result from './result';
 
 import './index.scss';
 
-const Home = props => {
+export const Home = ({ service, ...props }) => {
   const [searchValue, setSearchValue] = useState('');
   const dispatch = useDispatch();
   const reduxSpotify = useSelector(state => state.spotify.list);
@@ -19,11 +19,9 @@ const Home = props => {
     setSearchValue(search);
 
     if (search !== searchValue) {
-      services()
-        .spotify.search(search)
-        .then(data => {
-          dispatch(actionsSpotify.setList(data.albums));
-        });
+      service.spotify.search(search).then(data => {
+        dispatch(actionsSpotify.setList(data.albums));
+      });
     }
   };
 
@@ -48,4 +46,4 @@ const Home = props => {
     </Container>
   );
 };
-export default Home;
+export default withServices(Home);

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import services from '../../services';
+import { withServices } from '../../services';
 import { useDispatch, useSelector } from 'react-redux';
 import { actionsSpotify } from '../../reducers/actions';
 
@@ -10,18 +10,16 @@ import List from './list';
 import Thumb from './thumb';
 import './index.scss';
 
-const Album = props => {
+export const Album = ({ service, ...props }) => {
   const { params = '' } = props.match;
   const dispatch = useDispatch();
   const reduxSpotifyAlbum = useSelector(state => state.spotify.album);
 
   useEffect(() => {
     if (params) {
-      services()
-        .spotify.albums(params.id)
-        .then(data => {
-          dispatch(actionsSpotify.setAlbum(data));
-        });
+      service.spotify.albums(params.id).then(data => {
+        dispatch(actionsSpotify.setAlbum(data));
+      });
     }
   }, []);
 
@@ -46,4 +44,4 @@ const Album = props => {
     </Container>
   );
 };
-export default Album;
+export default withServices(Album);

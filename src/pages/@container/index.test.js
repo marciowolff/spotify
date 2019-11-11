@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 
 import Container from './index';
 
-import { auth } from '../../services';
+import { auth } from 'spotify-service';
 
 const history = { push: jest.fn() };
 const location = { pathname: '/teste' };

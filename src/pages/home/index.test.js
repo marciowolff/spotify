@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 
 import { actionsSpotify } from '../../reducers/actions';
 
-import Home from './index';
+import { Home } from './index';
 
 const mockDispatch = jest.fn();
 jest.mock('react-redux', () => ({
@@ -12,14 +12,10 @@ jest.mock('react-redux', () => ({
   useSelector: () => ({ spotify: {} }),
 }));
 
-const mockSearch = jest.fn();
-jest.mock('../../services', () => () => ({
-  spotify: { search: mockSearch },
-}));
-
 const history = { push: jest.fn() };
 const location = { pathname: '/teste' };
 const spyactionsSpotify = jest.spyOn(actionsSpotify, 'setList');
+const mockSearch = jest.fn();
 
 let wrapper;
 
@@ -27,7 +23,13 @@ beforeEach(() => {
   mockSearch.mockImplementation(() =>
     Promise.resolve({ albums: { items: {} } })
   );
-  wrapper = shallow(<Home location={location} history={history} />);
+  wrapper = shallow(
+    <Home
+      location={location}
+      history={history}
+      service={{ spotify: { search: mockSearch } }}
+    />
+  );
 });
 
 afterEach(() => {

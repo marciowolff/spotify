@@ -12,11 +12,6 @@ jest.mock('react-redux', () => ({
   useSelector: () => ({ spotify: {} }),
 }));
 
-const mockAlbums = jest.fn();
-jest.mock('../../services', () => () => ({
-  spotify: { albums: mockAlbums },
-}));
-
 jest.mock('../@container', () => ({ children }) => (
   <div className="container">{children}</div>
 ));
@@ -24,6 +19,7 @@ jest.mock('../@container', () => ({ children }) => (
 const history = { push: jest.fn() };
 const location = { pathname: '/teste' };
 const match = { params: 'codParam' };
+const mockAlbums = jest.fn();
 
 const spysetAlbum = jest.spyOn(actionsSpotify, 'setAlbum');
 
@@ -32,7 +28,12 @@ let wrapper;
 beforeEach(() => {
   mockAlbums.mockImplementation(() => Promise.resolve({ items: {} }));
   wrapper = mount(
-    <Album location={location} history={history} match={match} />
+    <Album
+      location={location}
+      history={history}
+      match={match}
+      service={{ spotify: { albums: mockAlbums } }}
+    />
   );
 });
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SpotifyLogin from 'react-spotify-login';
 
 import { CLIENT_ID, SPOTIFY_URL } from '../../constants';
-import { auth } from '../../services';
+import { auth } from 'spotify-service';
 
 import Container from '../@container';
 
